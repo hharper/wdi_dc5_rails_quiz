@@ -1,1 +1,25 @@
 
+<h1><%= @circus.name %><h1>
+
+
+<br>
+
+
+<h1>The entertainers at this circus include:<h1>
+
+
+
+<% @circus.entertainers.each do |entertainer| %>
+<div class="entertainer">
+  <h3> Entertainer and Specialty:
+  <%= entertainer.name %> :
+  <%= entertainer.specialty %>
+  <h3>
+
+
+
+  </div>
+
+<% end %>
+
+<%= link_to "Home", circuses_path %>
